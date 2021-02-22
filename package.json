@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "github-api": "^3.4.0",
     "inquirer": "^7.3.3"
   },
   "devDependencies": {},

@@ -34,12 +34,17 @@ const questions = () =>
 
 // TODO: Create a function to write README file
 const writeToFile = (answers) =>
-    `
-Hi my name is ${answers.name}.
-My Github username is ${answers.user}.
-My email is ${answers.email}.
-The project I have been working on is ${answers.project}.
-Heres a little description of my project: ${answers.desc}.`;
+    `# ${answers.project}
+    ![NPM](https://img.shields.io/npm/l/inquirer)
+Hi my name is ***${answers.name}***.
+I have been working on a project called ${answers.project}.
+
+
+### Description of Project
+Heres a little description of my project: ${answers.desc}.
+#### Questions?
+If you have any questions feel free to either shoot me an email at ${answers.email}. Or if you want to reach out to me on Github here is my username: ${answers.username} and the link to my github [account](https://github.com/codymichaud)
+`;
 
 
 // TODO: Create a function to initialize app
