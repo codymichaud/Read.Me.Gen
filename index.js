@@ -37,12 +37,18 @@ const writeToFile = (answers) =>
     `# ${answers.project}
     ![NPM](https://img.shields.io/npm/l/inquirer)
 Hi my name is ***${answers.name}***.
-I have been working on a project called ${answers.project}.
+
 ### Table of Contents
-Links to
+[Description](/description/)
 
+[How to Invoke and Use](/usage/)
 
-### Description of Project
+[Questions](/questions/)
+
+[License](/license/)
+
+I have been working on a project called ${answers.project}.
+### [Description of Project]
 Heres a little description of my project: ${answers.desc}.
 ### Questions?
 If you have any questions feel free to either shoot me an email at ${answers.email}. Or if you want to reach out to me on Github here is my username: ${answers.username} and the link to my Github [account](https://github.com/codymichaud)
