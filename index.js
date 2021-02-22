@@ -38,12 +38,14 @@ const writeToFile = (answers) =>
     ![NPM](https://img.shields.io/npm/l/inquirer)
 Hi my name is ***${answers.name}***.
 I have been working on a project called ${answers.project}.
+### Table of Contents
+Links to
 
 
 ### Description of Project
 Heres a little description of my project: ${answers.desc}.
-#### Questions?
-If you have any questions feel free to either shoot me an email at ${answers.email}. Or if you want to reach out to me on Github here is my username: ${answers.username} and the link to my github [account](https://github.com/codymichaud)
+### Questions?
+If you have any questions feel free to either shoot me an email at ${answers.email}. Or if you want to reach out to me on Github here is my username: ${answers.username} and the link to my Github [account](https://github.com/codymichaud)
 `;
 
 
@@ -59,6 +61,7 @@ const init = () => {
         }
     })
 };
+
 
 // Function call to initialize app
 init();
