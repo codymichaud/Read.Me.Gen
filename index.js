@@ -30,13 +30,19 @@ const questions = () =>
             name: 'desc',
             message: 'Write a brief description of your project.',
         },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'What License would you like your project to have?',
+            choices: ['MIT', 'GNU', 'Apache', 'BSD', 'Apache 2.0']
+        },
     ]);
 
 // TODO: Create a function to write README file
-const writeToFile = (answers) =>
-    `# ${answers.project}
-    ![NPM](https://img.shields.io/npm/l/inquirer)
-Hi my name is ***${answers.name}***.
+const writeToFile = (response) =>
+    `# ${response.project}
+    
+Hi my name is ***${response.name}***.
 
 ### Table of Contents
 [Description](/description/)
@@ -45,21 +51,23 @@ Hi my name is ***${answers.name}***.
 
 [Questions](/questions/)
 
-[License](/license/)
+[Licenses](/licenses/)
 
-I have been working on a project called ${answers.project}.
+I have been working on a project called ${response.project}.
 ### [Description of Project]
-Heres a little description of my project: ${answers.desc}.
+Heres a little description of my project: ${response.desc}.
+### [Licenses]
+This project has been license by ${response.license}
 ### Questions?
-If you have any questions feel free to either shoot me an email at ${answers.email}. Or if you want to reach out to me on Github here is my username: ${answers.username} and the link to my Github [account](https://github.com/codymichaud)
+If you have any questions feel free to either shoot me an email at ${response.email}. Or if you want to reach out to me on Github here is my username: ${response.username} and the link to my Github [account](https://github.com/codymichaud)
 `;
 
 
 // TODO: Create a function to initialize app
 const init = () => {
-    questions().then((answers) => {
+    questions().then((response) => {
         try {
-            const markdown = writeToFile(answers);
+            const markdown = writeToFile(response);
             fs.writeFileSync('ReadMe.Gen.md', markdown);
             console.log("Yay!! You wrote to the ReadMe!!!");
         } catch (err) {
