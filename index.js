@@ -33,11 +33,28 @@ const questions = () =>
     ]);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+const writeToFile = (answers) =>
+    `
+Hi my name is ${answers.name}.
+My Github username is ${answers.user}.
+My email is ${answers.email}.
+The project I have been working on is ${answers.project}.
+Heres a little description of my project: ${answers.desc}.`;
+
 
 // TODO: Create a function to initialize app
-function init() { }
+const init = () => {
+    questions().then((answers) => {
+        try {
+            const markdown = writeToFile(answers);
+            fs.writeFileSync('ReadMe.Gen.md', markdown);
+            console.log("Yay!! You wrote to the ReadMe!!!");
+        } catch (err) {
+            console.log(err);
+        }
+    })
+};
 
 // Function call to initialize app
 init();
-questions();
+
