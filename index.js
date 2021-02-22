@@ -45,20 +45,20 @@ const writeToFile = (response) =>
 Hi my name is ***${response.name}***.
 
 ### Table of Contents
-[Description](/description/)
+[Description]
 
-[How to Invoke and Use](/usage/)
+[How to Invoke and Use]
 
-[Questions](/questions/)
+[Questions]
 
-[Licenses](/licenses/)
+[Licenses]
 
 I have been working on a project called ${response.project}.
-### [Description of Project]
+### Description of Project
 Heres a little description of my project: ${response.desc}.
-### [Licenses]
+### Licenses
 This project has been license by ${response.license}
-### Questions?
+### Questions ?
 If you have any questions feel free to either shoot me an email at ${response.email}. Or if you want to reach out to me on Github here is my username: ${response.username} and the link to my Github [account](https://github.com/codymichaud)
 `;
 
@@ -68,7 +68,7 @@ const init = () => {
     questions().then((response) => {
         try {
             const markdown = writeToFile(response);
-            fs.writeFileSync('ReadMe.Gen.md', markdown);
+            fs.writeFileSync(`${response.project}.md`, markdown);
             console.log("Yay!! You wrote to the ReadMe!!!");
         } catch (err) {
             console.log(err);
