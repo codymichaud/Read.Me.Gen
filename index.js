@@ -34,24 +34,30 @@ const questions = () =>
             type: 'checkbox',
             name: 'license',
             message: 'What License would you like your project to have?',
-            choices: ['MIT', 'GNU', 'Apache', 'BSD', 'Apache 2.0']
+            choices: ['MIT', 'BSD', 'Apache', 'GNU', 'Eclipse', 'Mozilla']
         },
     ]);
 
+const licenses = response.license === 'Apache' ? "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]" : response.license === 'GNU' ? "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)]" : response.license === 'BSD' ? "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]" : response.license === 'MIT' ? "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]" : response.license === 'Eclipse' ? "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]" : "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]"
+
 // TODO: Create a function to write README file
+
+
 const writeToFile = (response) =>
+
+
     `# ${response.project}
     
 Hi my name is ***${response.name}***.
 
 ### Table of Contents
-[Description]
+#### Description
 
-[How to Invoke and Use]
+#### How to Invoke and Use
 
-[Questions]
+#### Questions
 
-[Licenses]
+#### Licenses
 
 I have been working on a project called ${response.project}.
 ### Description of Project
@@ -79,4 +85,3 @@ const init = () => {
 
 // Function call to initialize app
 init();
-
