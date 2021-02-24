@@ -38,7 +38,8 @@ const questions = () =>
         },
     ]);
 
-const licenses = response.license === 'Apache' ? "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]" : response.license === 'GNU' ? "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)]" : response.license === 'BSD' ? "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]" : response.license === 'MIT' ? "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]" : response.license === 'Eclipse' ? "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]" : "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]"
+
+//const licenses = response.license === 'Apache' ? "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]" : response.license === 'GNU' ? "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)]" : response.license === 'BSD' ? "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]" : response.license === 'MIT' ? "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]" : response.license === 'Eclipse' ? "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]" : "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]"
 
 // TODO: Create a function to write README file
 
@@ -62,10 +63,12 @@ Hi my name is ***${response.name}***.
 I have been working on a project called ${response.project}.
 ### Description of Project
 Heres a little description of my project: ${response.desc}.
+
 ### Licenses
 This project has been license by ${response.license}
+
 ### Questions ?
-If you have any questions feel free to either shoot me an email at ${response.email}. Or if you want to reach out to me on Github here is my username: ${response.username} and the link to my Github [account](https://github.com/codymichaud)
+If you have any questions feel free to either shoot me an email at ${response.email}. Or if you want to reach out to me on Github here is my username: ***${response.username}*** and the link to my Github [account](https://github.com/codymichaud)
 `;
 
 
