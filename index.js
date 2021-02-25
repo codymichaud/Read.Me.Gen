@@ -54,7 +54,7 @@ Hi my name is ***${response.name}***.
 ### Table of Contents
 #### Description
 
-#### How to Invoke and Use
+#### How to Install and Use
 
 #### Questions
 
@@ -63,6 +63,12 @@ Hi my name is ***${response.name}***.
 I have been working on a project called ${response.project}.
 ### Description of Project
 Heres a little description of my project: ${response.desc}.
+
+### How to Install and use
+
+In order to successfully use this ReadMe Generator the user will need to install the Inqurier package.
+Go to your command line and type "****npm i inquirer****".
+After successfully installing "****npm inqurier****" the user will then type "****node index.js****" to invoke the program. After invoking the program the user will then answer a series of prompts asking for their name, Github username, email, project name, project description and the licensing the user would like to use. After the users answers all the prompts a Readme will the be generated with the provided information.
 
 ### Licenses
 This project has been license by ${response.license}
