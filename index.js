@@ -68,7 +68,7 @@ Heres a little description of my project: ${response.desc}.
 
 In order to successfully use this ReadMe Generator the user will need to install the Inqurier package.
 Go to your command line and type "****npm i inquirer****".
-After successfully installing "****npm inqurier****" the user will then type "****node index.js****" to invoke the program. After invoking the program the user will then answer a series of prompts asking for their name, Github username, email, project name, project description and the licensing the user would like to use. After the users answers all the prompts a Readme will the be generated with the provided information.
+After successfully installing "****npm inqurier****" the user will then type "****node index.js****" to invoke the program. After invoking the program the user will then answer a series of prompts asking for their name, Github username, email, project name, project description and the licensing the user would like to use. The user will use the up and down arrow keys in order to move to the license they want to select after landing on their selected license they will then need to hit the space bar in order to select that license. After the users answers all the prompts a Readme will the be generated with the provided information.
 
 ### Licenses
 This project has been license by ${response.license}
