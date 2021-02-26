@@ -17,4 +17,4 @@ After successfully installing "****npm inqurier****" the user will then type "**
 
 In case link to video isnt working here is a gif of how to use my application
 
-![](imgs/readme.gengif.gif)
+![ReadMe Generator Walk-through](imgs/readme.gengif.gif)
